@@ -144,21 +144,49 @@
   }
 }
 
-@utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
-}
-
-@utility fancy-text {
-  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
-  font-size: 190px;
-  font-family: "Bebas Neue", sans-serif;
-}
-
-@utility hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-hero-pattern {
+    background-image: var(--background-image-hero-pattern);
+  }
+  .bg-light-100\/5 {
+    background-color: rgba(206, 206, 251, 0.05);
+  }
+  .bg-dark-100 {
+    background-color: var(--color-dark-100);
+  }
+  .shadow-light-100\/10 {
+    box-shadow: 0 1px 3px 0 rgba(206, 206, 251, 0.1), 0 1px 2px 0 rgba(206, 206, 251, 0.06);
+  }
+  .text-gradient {
+    background: linear-gradient(to right, #D6C7FF, #AB8BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+  .placeholder-light-200::placeholder {
+    color: var(--color-light-200);
+    opacity: 1;
+  }
+  .outline-hidden {
+    outline: none;
+  }
+}
+
+@layer components {
+  .fancy-text {
+    -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+    font-size: 190px;
+    font-family: "Bebas Neue", sans-serif;
   }
 }
