@@ -5,7 +5,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'dm-sans': ['DM Sans', 'sans-serif'],
+        'bebas-neue': ['Bebas Neue', 'sans-serif'],
+      },
+    },
     screens: {
       'xs': '480px',
       'sm': '640px',
